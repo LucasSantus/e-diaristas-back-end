@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .forms import DiaristaForm
+from .models import Diarista
 
 def home(request):
     return render(request, 'index.html')
