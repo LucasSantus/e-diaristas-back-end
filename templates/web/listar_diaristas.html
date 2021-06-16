@@ -1,32 +1,33 @@
-{% block title %}
+{% extends 'base.html' %}
 
+{% block title %}
+    Listagem | E-Diaristas
 {% endblock %}
 
 {% block content %}
-        {% endblock %}
-        <table>
-            <thead>
+    <table>
+        <thead>
+            <tr>
+            <th>#</th>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>CEP</th>
+            <th>Ações</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for diarista in diaristas %}
                 <tr>
-                <th>#</th>
-                <th>Nome</th>
-                <th>E-mail</th>
-                <th>CEP</th>
-                <th>Ações</th>
-            </tr>
-            </thead>
-            <tbody>
-                {% for diarista in diaristas %}
-                    <tr>
-                        <td>{{diarista.id}}</td>
-                        <td>{{diarista.nome_completo}}</td>
-                        <td>{{diarista.email}}</td>
-                        <td>{{diarista.cep}}</td>
-                        <td>
-                            <a href='/'>Editar</a>
-                            <a href='/'>Remover</a>
-                        </td>
-                    </tr>
-                {% endfor %}
-            </tbody>
-            
-        </table>
+                    <td>{{diarista.id}}</td>
+                    <td>{{diarista.nome_completo}}</td>
+                    <td>{{diarista.email}}</td>
+                    <td>{{diarista.cep}}</td>
+                    <td>
+                        <a href='/'>Editar</a>
+                        <a href='/'>Remover</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
