@@ -1,13 +1,15 @@
 {% extends 'base.html' %}
 
+{% load crispy_forms_tags %}
+
 {% block title %}
-    Cadastro | E-Diaristas
+    Cadastro | Ediaristas
 {% endblock %}
 
 {% block content %}
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
-        {{form.as_p}}
+        {{form|crispy}}
         <button type="submit">cadastrar</button>
     </form>
 {% endblock %}

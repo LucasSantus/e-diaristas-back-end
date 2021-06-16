@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
     <html lang="pt">
     <head>
@@ -18,12 +20,22 @@
 
         <title>
             {% block title %}
-                E-Diaristas
+                Ediaristas
             {% endblock %}
         </title>
     </head>
     <body>
-        <main>
+        <nav class="navbar navbar-expand-md navbar-dar bg-dark md-4">
+            <a href="/" class="navbar-brand">Ediaristas</a>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a href="/" class="nav-link">Dashboard</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <main role="main" class="container">
             {% block content %}
             {% endblock %}
         </main>

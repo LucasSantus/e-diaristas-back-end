@@ -15,8 +15,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-# Application definition
-
+# APP's Padrões 
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -26,9 +25,17 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
+# APP's Internas
 INSTALLED_APPS += [
     'web',
 ]
+
+# APP's Externas
+INSTALLED_APPS += [
+    'crispy_forms',
+]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
