@@ -33,6 +33,7 @@ INSTALLED_APPS += [
 # APP's Externas
 INSTALLED_APPS += [
     'crispy_forms',
+    'easy_mask',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
