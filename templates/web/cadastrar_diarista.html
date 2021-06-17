@@ -10,6 +10,6 @@
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         {{form|crispy}}
-        <button type="submit">cadastrar</button>
+        <button type="submit" class="btn btn-primary">CADASTRAR</button>
     </form>
 {% endblock %}
