@@ -28,6 +28,7 @@ INSTALLED_APPS = [
 # APP's Internas
 INSTALLED_APPS += [
     'web',
+    'api',
 ]
 
 # APP's Externas
